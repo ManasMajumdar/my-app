@@ -1,15 +1,12 @@
 import React from 'react'
 
-function Alert() {
+function Alert(props) {
   return (
-    <div>\
-
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-
-
+    <div>
+        props.alert && <div class="alert alert-warning alert-dismissible fade show" role="alert">
+           <strong>{props.alert.type}</strong>: {props.alert.msg}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
     </div>
   )
 }
